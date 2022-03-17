@@ -1,4 +1,6 @@
 # Sensor and Authentication
+ Let's study SENSOR_SERVICE and MVVM, DataBinding(also ViewBinding), BindingAdapter
+
 > ## TYPE_LIGHT
   ![light_off](/capture/light_off.png) 
   ![light_on](/capture/light_on.png)

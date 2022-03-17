@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".light.view.LightFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.myjb.dev.sensor.light.viewmodel.LightViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@{viewModel.lux > 70 ? @drawable/sensor_light_off : @drawable/sensor_light_on }">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@null"
+            android:src="@drawable/brightness"
+            app:customImageTintList="@{viewModel.brightness}"
+            app:layout_constraintEnd_toStartOf="@id/seekbar"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:progressBackgroundTint="#fff"
+            app:layout_constraintBottom_toBottomOf="@id/imageview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageview"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

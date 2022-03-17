@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".step.view.StepFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.myjb.dev.sensor.step.viewmodel.StepViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sensor_step">
+
+        <TextView
+            android:id="@+id/counterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:text="@{viewModel.counter.toString()}"
+            android:textColor="@color/white"
+            app:drawableStartCompat="@drawable/counter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detectorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:text="@{viewModel.detector.toString()}"
+            android:textColor="@color/white"
+            app:drawableStartCompat="@drawable/detector"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/counterText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

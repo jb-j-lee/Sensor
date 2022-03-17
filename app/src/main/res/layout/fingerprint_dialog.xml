@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fingerprint.view.FingerprintFragment">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.myjb.dev.sensor.fingerprint.viewmodel.FingerprintViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fingerprint_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/fingerprint_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/fingerprint_description"
+            android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+            android:textColor="?android:attr/textColorSecondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fingerprint_status"
+            style="@android:style/TextAppearance.Material.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/fingerprint_hint"
+            app:customDrawable="@{viewmodel.status}"
+            app:customMessage="@{viewmodel.message}"
+            app:customTextColor="@{viewmodel.status}"
+            app:layout_constraintStart_toStartOf="@id/fingerprint_description"
+            app:layout_constraintTop_toBottomOf="@id/fingerprint_description" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

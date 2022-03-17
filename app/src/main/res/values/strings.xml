@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SensorTest</string>
+
+    <string name="menu_light">Light Sensor</string>
+    <string name="menu_step">Step Sensor</string>
+    <string name="menu_fingerprint">Fingerprint</string>
+    <string name="menu_biometric">Biometric</string>
+
+    <string name="fingerprint_description">Confirm fingerprint to continue</string>
+    <string name="fingerprint_hint">Touch sensor</string>
+    <string name="fingerprint_not_recognized">Fingerprint not recognized. Try again</string>
+    <string name="fingerprint_success">Fingerprint recognized</string>
+    <string name="fingerprint_not_support">It is a device that cannot use fingerprint recognition.</string>
+    <string name="fingerprint_not_registered">There is no registered fingerprint information.</string>
+
+    <string name="biometric_description">Confirm your biometric credential to continue</string>
+    <string name="biometric_hint">Touch sensor</string>
+    <string name="biometric_not_support">No biometric features available on this device.</string>
+    <string name="biometric_unavailable">Biometric features are currently unavailable.</string>
+</resources>
